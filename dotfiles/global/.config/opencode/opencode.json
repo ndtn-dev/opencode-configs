@@ -1,0 +1,21 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": ["oh-my-opencode"],
+  "model": "anthropic/claude-sonnet-4-20250514",
+  "permission": {
+    "doom_loop": "ask",
+    "bash": {
+      "*": "ask",
+      "git status*": "allow",
+      "git diff*": "allow",
+      "git log*": "allow",
+      "git show*": "allow",
+      "rg *": "allow",
+      "bun *": "allow",
+      "npm *": "allow"
+    },
+    "edit": "allow",
+    "skill": "allow",
+    "lsp": "allow"
+  }
+}

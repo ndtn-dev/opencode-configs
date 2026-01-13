@@ -1,0 +1,13 @@
+.DS_Store
+node_modules/
+**/node_modules/
+**/bun.lock
+**/bun.lockb
+**/package.json
+**/package-lock.json
+**/pnpm-lock.yaml
+**/yarn.lock
+dist/
+.env
+.env.*
+*.log
