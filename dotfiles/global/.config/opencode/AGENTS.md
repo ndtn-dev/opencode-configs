@@ -23,3 +23,14 @@ These instructions apply to all OpenCode sessions unless overridden by a closer 
 
 - No AI slop: avoid filler, avoid long explanations, do not add gratuitous comments.
 - Use clear commit messages and PR descriptions when requested, focusing on "why".
+
+## Available CLI tools
+
+- rg (ripgrep), fd, jq, gh
+- bat, eza, tree, fzf
+- delta, tig
+- shellcheck, shfmt, watchexec
+- curl, wget, unzip, tar, sqlite3
+- dnsutils (dig, nslookup), iputils-ping
+- traceroute, mtr
+- iproute2 (ip), netcat-openbsd (nc), openssl
