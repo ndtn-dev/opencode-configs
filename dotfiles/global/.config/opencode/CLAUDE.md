@@ -1,6 +1,6 @@
 # OpenCode Operating Rules
 
-These instructions apply to all OpenCode sessions unless overridden by a project-specific `AGENTS.md`.
+These instructions apply to all OpenCode sessions unless overridden by a project-specific `CLAUDE.md`.
 
 ## Execution style
 
