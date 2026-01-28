@@ -17,7 +17,29 @@ These instructions apply to all OpenCode sessions unless overridden by a project
 - `redacted-read` - For accessing files that may contain secrets (extracts structure, redacts values)
 - `bricknet-vps` - For VPS management via Arcane API or SSH
 - `git-safety` - For safe git workflow defaults
+- `review-before-ship` - Quick pre-ship checklist (diagnostics, tests, formatting)
 - `no-ai-slop` - For senior engineer code style
+
+**n8n skills (load when working with n8n):**
+- `n8n-mcp-tools-expert` - Use n8n-mcp tools effectively
+- `n8n-node-configuration` - Operation-aware node configuration
+- `n8n-validation-expert` - Interpret and fix validation errors
+- `n8n-expression-syntax` - Write/debug n8n expressions
+- `n8n-workflow-patterns` - Workflow architecture patterns
+- `n8n-code-javascript` - JavaScript Code node guidance
+- `n8n-code-python` - Python Code node guidance
+
+**Skill auto-load triggers (non-exhaustive):**
+- Secrets/config files (`.env`, keys, tokens, credentials) -> load `redacted-read` before reading
+- Git actions (commit/rebase/squash/push) -> load `git-safety`
+- n8n MCP / template / node discovery / validation -> load `n8n-mcp-tools-expert`
+- n8n node config / required fields / operation+resource confusion -> load `n8n-node-configuration`
+- n8n validation errors/warnings or profile selection -> load `n8n-validation-expert`
+- n8n expressions (`{{ }}`, `$json`, `$node`, webhook payload access) -> load `n8n-expression-syntax`
+- n8n workflow structure/pattern design -> load `n8n-workflow-patterns`
+- n8n Code node (JavaScript) -> load `n8n-code-javascript`
+- n8n Code node (Python) -> load `n8n-code-python`
+- Before shipping larger changes -> load `review-before-ship`
 
 ## Safety
 
