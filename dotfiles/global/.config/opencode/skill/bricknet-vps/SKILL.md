@@ -1,3 +1,12 @@
+---
+name: bricknet-vps
+description: Manage bricknet-edge services via Arcane API or SSH (deploy, restart, pull)
+compatibility: opencode
+metadata:
+  category: infra
+  triggers: vps, bricknet-edge, arcane, ssh, docker, deploy, restart
+---
+
 # Bricknet VPS Management
 
 Manage bricknet-edge VPS services via Arcane API or SSH.
