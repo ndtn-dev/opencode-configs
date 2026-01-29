@@ -2,6 +2,14 @@
 
 These instructions apply to all OpenCode sessions unless overridden by a project-specific `AGENTS.md`.
 
+## Project references
+
+Fetch these URLs when you need the latest documentation, features, or configuration options:
+
+- **OpenCode** (core terminal agent): <https://opencode.ai/>
+  - Documentation: <https://opencode.ai/docs>
+- **oh-my-opencode** (plugin - agents, skills, hooks, background tasks): <https://github.com/code-yeongyu/oh-my-opencode>
+
 ## Execution style
 
 - Work like a senior engineer: precise, pragmatic, no overengineering.
