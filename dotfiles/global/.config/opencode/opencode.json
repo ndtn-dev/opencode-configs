@@ -1,11 +1,10 @@
 {
   "$schema": "https://opencode.ai/config.json",
+  "model": "anthropic/claude-sonnet-4-5",
   "plugin": [
-    "oh-my-opencode@beta",
     "opencode-antigravity-auth@latest",
-    "opencode-openai-codex-auth"
+    "oh-my-opencode@latest"
   ],
-  "model": "google/antigravity-claude-opus-4-5-thinking",
   "permission": {
     "read": {
       "*": "allow",
@@ -42,14 +41,8 @@
     "bash": {
       "*": "allow",
       "git *": "allow",
-      "git status*": "allow",
-      "git diff*": "allow",
-      "git log*": "allow",
-      "git show*": "allow",
       "docker *": "allow",
       "docker-compose *": "allow",
-      "rg *": "allow",
-      "bun *": "allow",
       "npm *": "allow",
       "yarn *": "allow",
       "pnpm *": "allow",
@@ -90,97 +83,136 @@
     "list": "allow",
     "task": "allow",
     "skill": "allow",
-    "lsp": "allow",
     "webfetch": "allow",
     "external_directory": "allow",
     "doom_loop": "ask"
   },
-  "provider": {
-    "openai": {
-      "name": "OpenAI",
-      "options": {
-        "reasoningEffort": "medium",
-        "reasoningSummary": "auto",
-        "textVerbosity": "medium",
-        "include": ["reasoning.encrypted_content"],
-        "store": false
-      },
-      "models": {
-        "gpt-5.2": {
-          "name": "GPT 5.2 (OAuth)",
-          "limit": { "context": 272000, "output": 128000 },
-          "modalities": { "input": ["text", "image"], "output": ["text"] },
-          "variants": {
-            "none": { "reasoningEffort": "none", "reasoningSummary": "auto", "textVerbosity": "medium" },
-            "low": { "reasoningEffort": "low", "reasoningSummary": "auto", "textVerbosity": "medium" },
-            "medium": { "reasoningEffort": "medium", "reasoningSummary": "auto", "textVerbosity": "medium" },
-            "high": { "reasoningEffort": "high", "reasoningSummary": "detailed", "textVerbosity": "medium" },
-            "xhigh": { "reasoningEffort": "xhigh", "reasoningSummary": "detailed", "textVerbosity": "medium" }
-          }
-        },
-        "gpt-5.2-codex": {
-          "name": "GPT 5.2 Codex (OAuth)",
-          "limit": { "context": 272000, "output": 128000 },
-          "modalities": { "input": ["text", "image"], "output": ["text"] },
-          "variants": {
-            "low": { "reasoningEffort": "low", "reasoningSummary": "auto", "textVerbosity": "medium" },
-            "medium": { "reasoningEffort": "medium", "reasoningSummary": "auto", "textVerbosity": "medium" },
-            "high": { "reasoningEffort": "high", "reasoningSummary": "detailed", "textVerbosity": "medium" },
-            "xhigh": { "reasoningEffort": "xhigh", "reasoningSummary": "detailed", "textVerbosity": "medium" }
-          }
-        },
-        "gpt-5.1-codex-max": {
-          "name": "GPT 5.1 Codex Max (OAuth)",
-          "limit": { "context": 272000, "output": 128000 },
-          "modalities": { "input": ["text", "image"], "output": ["text"] },
-          "variants": {
-            "low": { "reasoningEffort": "low", "reasoningSummary": "detailed", "textVerbosity": "medium" },
-            "medium": { "reasoningEffort": "medium", "reasoningSummary": "detailed", "textVerbosity": "medium" },
-            "high": { "reasoningEffort": "high", "reasoningSummary": "detailed", "textVerbosity": "medium" },
-            "xhigh": { "reasoningEffort": "xhigh", "reasoningSummary": "detailed", "textVerbosity": "medium" }
-          }
-        }
+  "mcp": {
+    "n8n": {
+      "type": "remote",
+      "url": "http://n8n-mcp:3000/mcp",
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer c656e42d68d286989c8be100d26d19ad30c5d34551e2c4f3725fb574847180ab"
       }
-    },
+    }
+  },
+  "provider": {
     "google": {
       "npm": "@ai-sdk/google",
       "models": {
         "antigravity-gemini-3-pro": {
           "name": "Gemini 3 Pro (Antigravity)",
-          "limit": { "context": 1048576, "output": 65535 },
-          "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] },
+          "limit": {
+            "context": 1048576,
+            "output": 65535
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
           "variants": {
-            "low": { "thinkingLevel": "low" },
-            "high": { "thinkingLevel": "high" }
+            "low": {
+              "thinkingLevel": "low"
+            },
+            "high": {
+              "thinkingLevel": "high"
+            }
           }
         },
         "antigravity-gemini-3-flash": {
           "name": "Gemini 3 Flash (Antigravity)",
-          "limit": { "context": 1048576, "output": 65536 },
-          "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] },
+          "limit": {
+            "context": 1048576,
+            "output": 65536
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
           "variants": {
-            "minimal": { "thinkingLevel": "minimal" },
-            "low": { "thinkingLevel": "low" },
-            "medium": { "thinkingLevel": "medium" },
-            "high": { "thinkingLevel": "high" }
+            "minimal": {
+              "thinkingLevel": "minimal"
+            },
+            "low": {
+              "thinkingLevel": "low"
+            },
+            "medium": {
+              "thinkingLevel": "medium"
+            },
+            "high": {
+              "thinkingLevel": "high"
+            }
           }
         },
         "antigravity-claude-sonnet-4-5-thinking": {
           "name": "Claude Sonnet 4.5 Thinking (Antigravity)",
-          "limit": { "context": 200000, "output": 64000 },
-          "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] },
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
           "variants": {
-            "low": { "thinkingConfig": { "thinkingBudget": 8192 } },
-            "max": { "thinkingConfig": { "thinkingBudget": 32768 } }
+            "low": {
+              "thinkingConfig": {
+                "thinkingBudget": 8192
+              }
+            },
+            "max": {
+              "thinkingConfig": {
+                "thinkingBudget": 32768
+              }
+            }
           }
         },
         "antigravity-claude-opus-4-5-thinking": {
           "name": "Claude Opus 4.5 Thinking (Antigravity)",
-          "limit": { "context": 200000, "output": 64000 },
-          "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] },
+          "limit": {
+            "context": 200000,
+            "output": 64000
+          },
+          "modalities": {
+            "input": [
+              "text",
+              "image",
+              "pdf"
+            ],
+            "output": [
+              "text"
+            ]
+          },
           "variants": {
-            "low": { "thinkingConfig": { "thinkingBudget": 8192 } },
-            "max": { "thinkingConfig": { "thinkingBudget": 32768 } }
+            "low": {
+              "thinkingConfig": {
+                "thinkingBudget": 8192
+              }
+            },
+            "max": {
+              "thinkingConfig": {
+                "thinkingBudget": 32768
+              }
+            }
           }
         }
       }
