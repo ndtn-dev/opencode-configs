@@ -91,10 +91,7 @@
     "n8n": {
       "type": "remote",
       "url": "http://n8n-mcp:3000/mcp",
-      "enabled": true,
-      "headers": {
-        "Authorization": "Bearer c656e42d68d286989c8be100d26d19ad30c5d34551e2c4f3725fb574847180ab"
-      }
+      "enabled": true
     }
   },
   "provider": {
