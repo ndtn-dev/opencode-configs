@@ -2,7 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
   "agents": {
     "sisyphus": {
-      "model": "opencode/kimi-k2.5-free"
+      "model": "anthropic/claude-opus-4-5"
+    },
+    "hephaestus": {
+      "model": "openai/gpt-5.2-codex"
     },
     "atlas": {
       "model": "anthropic/claude-opus-4-5"
@@ -11,31 +14,31 @@
       "model": "anthropic/claude-opus-4-5"
     },
     "metis": {
-      "model": "anthropic/claude-opus-4-5"
+      "model": "openai/gpt-5.2"
     },
     "momus": {
-      "model": "opencode/kimi-k2.5-free"
+      "model": "openai/gpt-5.2"
     },
     "sisyphus-junior": {
-      "model": "opencode/glm-4.7-free"
+      "model": "openai/gpt-5.2-codex"
     },
     "oracle": {
       "model": "anthropic/claude-opus-4-5"
     },
     "librarian": {
-      "model": "opencode/minimax-m2.1-free"
+      "model": "opencode/glm-4.7-free"
     },
     "explore": {
-      "model": "opencode/minimax-m2.1-free"
+      "model": "opencode/glm-4.7-free"
     },
     "frontend-ui-ux-engineer": {
-      "model": "opencode/kimi-k2.5-free"
+      "model": "google/antigravity-gemini-3-pro"
     },
     "document-writer": {
       "model": "opencode/minimax-m2.1-free"
     },
     "multimodal-looker": {
-      "model": "opencode/kimi-k2.5-free"
+      "model": "google/antigravity-gemini-3-pro"
     },
     "title": {
       "model": "opencode/minimax-m2.1-free"
