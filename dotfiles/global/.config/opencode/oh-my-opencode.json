@@ -26,10 +26,10 @@
       "model": "anthropic/claude-opus-4-6"
     },
     "librarian": {
-      "model": "opencode/glm-4.7-free"
+      "model": "opencode/kimi-k2.5-free"
     },
     "explore": {
-      "model": "opencode/glm-4.7-free"
+      "model": "opencode/kimi-k2.5-free"
     },
     "frontend-ui-ux-engineer": {
       "model": "google/antigravity-gemini-3-pro"
