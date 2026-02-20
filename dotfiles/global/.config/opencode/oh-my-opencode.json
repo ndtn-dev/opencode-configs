@@ -1,6 +1,15 @@
 {
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
   "google_auth": false,
+  "disabled_hooks": [
+    "hashline-edit-diff-enhancer",
+    "hashline-read-enhancer"
+  ],
+  "experimental": {
+    "truncate_all_tool_outputs": true,
+    "aggressive_truncation": true,
+    "preemptive_compaction": true
+  },
   "agents": {
     "frontend-ui-ux-engineer": {
       "model": "google/antigravity-gemini-3-pro"

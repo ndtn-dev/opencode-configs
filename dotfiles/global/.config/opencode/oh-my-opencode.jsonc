@@ -3,5 +3,15 @@
   // Only override what the plugin's built-in fallback chains can't auto-detect.
   // Everything else uses defaults: Opus for planning, GPT for reasoning, Gemini for visual.
   "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-opencode/master/assets/oh-my-opencode.schema.json",
-  "google_auth": false
+  "google_auth": false,
+  "disabled_hooks": [
+    // Prevent full-file edit diff snapshots from inflating Claude context.
+    "hashline-edit-diff-enhancer",
+    "hashline-read-enhancer"
+  ],
+  "experimental": {
+    "truncate_all_tool_outputs": true,
+    "aggressive_truncation": true,
+    "preemptive_compaction": true
+  }
 }
