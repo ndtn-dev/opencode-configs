@@ -6,7 +6,7 @@
   "plugin": [
     "opencode-antigravity-auth@latest",
     "@tarquinen/opencode-dcp@latest",
-    "oh-my-opencode@latest"
+    "oh-my-opencode@beta"
   ],
   "permission": {
     "read": {
